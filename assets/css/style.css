@@ -1,0 +1,112 @@
+body {
+	margin: 0 auto;
+	font-family: 'Poppins', sans-serif;
+	background-image: linear-gradient(to right, rgba(255,0,0,0), rgb(51, 204, 255));
+}
+
+.text-kiri{
+	font-family: 'Bangers', cursive;
+	font-style: italic;
+	margin-top: 30px;
+}
+
+.text-kiri a{
+	text-decoration: none;
+}
+
+.bg-nav{
+	background-image: linear-gradient(to right, rgba(255,0,0,0), rgb(51, 204, 255));
+}
+
+.text-kiri::after{
+	content: url('assets/img/logo.png');
+	width: 300px;
+}
+
+.text-kiri button{
+	color: #fff;
+	background-color: #ff6666 ;
+	border-radius: 30px;
+	padding: 5px;
+	width: 250px;
+	margin-top: 30px;
+	margin-left: 260px;
+	font-size: 20px;
+	
+}
+
+.kiri-dashboard{
+	margin-top: 40px;
+	margin-bottom: 70px;
+}
+
+.text-kiri img{
+	width: 150px;
+}
+
+
+.image-kanan img{
+	width: 100%;
+	margin-top: 60px;
+	height: 350px;
+}
+
+.navbar{
+	top: 0;
+	position: fixed;
+	width: 100%;
+	z-index: 1;
+}
+
+.navbar-light .navbar-nav .nav-link
+{
+	color: #fff;
+	text-transform: uppercase;
+	padding: 10px;
+}
+
+.navbar-light .navbar-nav .nav-link:hover{
+	color: #ffcc00;
+}
+
+
+.btn-login {
+	color: #fff;
+	margin-top: 5px;
+	width: 100px;
+}
+
+.navbar .container img{
+	width: 240px;
+}
+
+.btn-action a{
+	text-decoration: none;
+}
+
+.btn-daftar{
+	background-color: #0099ff;
+	color: #fff;
+	padding: 13px;
+	border-radius: 25px;
+}
+
+.btn-login-kiri{
+	background-color: #ffcc00;
+	color: #fff;
+	padding: 13px;
+	border-radius: 25px;
+	width: 30px !important;
+}
+
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+
+	.bg-nav{
+		background-color:  darkorange;
+	}
+
+
+
+ }
