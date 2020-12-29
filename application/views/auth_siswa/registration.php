@@ -17,17 +17,19 @@
                                 <?= form_error('name', '<small class="text-danger pl">', '</small>'); ?>
                             </div>
                             <div class="form-group">
-                                <input type="text" class="form-control form-control-user" id="exampleInputEmail" name="user_name" placeholder="Username/NISN" value="<?= set_value('name') ?>">
+                                <input type="text" class="form-control form-control-user" id="exampleInputEmail" name="user_name" placeholder="NISN" value="<?= set_value('name') ?>">
                                 <?= form_error('user_name', '<small class="text-danger pl">', '</small>'); ?>
                             </div>
-                            <div class="form-group row">
-                                <div class="col-sm-6 mb-3 mb-sm-0">
-                                    <input type="password" class="form-control form-control-user" name="password1" id="password1" placeholder="Password/NISN">
-                                    <?= form_error('password1', '<small class="text-danger pl-3">', '</small>'); ?>
-                                </div>
-                                <div class="col-sm-6">
-                                    <input type="password" class="form-control form-control-user" name="password2" id="password2" placeholder="Ulangi Password">
-                                </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control form-control-user" id="no_hp" name="no_hp" placeholder="No Handphone" value="<?= set_value('no_hp') ?>">
+                                <?= form_error('user_name', '<small class="text-danger pl">', '</small>'); ?>
+                            </div>
+                            <div class="form-group">
+                                <input type="password" class="form-control form-control-user" name="password1" id="password1" placeholder="Password/NISN">
+                                <?= form_error('password1', '<small class="text-danger pl-3">', '</small>'); ?>
+                            </div>
+                            <div class="form-group">
+                                <input type="password" class="form-control form-control-user" name="password2" id="password2" placeholder="Ulangi Password">
                             </div>
                             <button type="submit" class="btn btn-primary btn-user btn-block">
                                 Register Akun

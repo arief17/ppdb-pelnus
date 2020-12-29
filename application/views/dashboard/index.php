@@ -17,7 +17,7 @@
 	<!-- navbar -->
 	<nav class="navbar navbar-expand-lg navbar-light bg-nav mb-5">
 		<div class="container">
-			<img src="<?php echo base_url()?>assets/img/logo-baru.png" alt="">
+		<img src="<?php echo base_url()?>assets/img/logo-baru.png" alt="">
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon"></span>
 		</button>
@@ -27,7 +27,7 @@
 					<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="#info-daftar">Info Pendaftaran</a>
+					<a class="nav-link" href="#info-daftar">Aktivasi Pendaftaran</a>
 				</li>
 				<li class="nav-item">
 					<button class="btn-login btn btn-warning btn-sm" data-toggle="modal" data-target="#loginModal">LOGIN</button>
@@ -150,7 +150,8 @@
 			<h5 class="modal-title" id="exampleModalLabel">Modal Login</h5>
 		</div>
 		<div class="modal-body modal-login">
-			<form action="#">
+		<?= $this->session->flashdata('message'); ?>
+			<form action="<?= base_url('auth_siswa'); ?>" method="post">
 				<div class="form-group">
 					<label for="inoutusername">Username</label>
 					<input type="text" class="form-control" placeholder="Masukan Username Anda">
