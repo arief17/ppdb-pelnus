@@ -163,6 +163,38 @@ body {
 	border-radius: 20px;
 }
 
+.register a{
+	text-decoration: none;
+}
+
+.register img{
+	height: 520px;
+	border-radius: 20px;
+}
+
+.login img{
+	height: 100px;
+}
+
+.login a{
+	text-decoration: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* Extra small devices (portrait phones, less than 576px) */
 @media (max-width: 575.98px) {

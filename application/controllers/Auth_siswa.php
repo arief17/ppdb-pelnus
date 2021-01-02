@@ -66,7 +66,7 @@ class Auth_siswa extends CI_Controller
                     redirect('auth_siswa');
                 }
             } else {
-                $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">Akun Anda Belum di Aktivasi Silahkan Lakukan Pembayaran Pendaftaran Terlebih dahulu!</br>
+                $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">Mohon Maaf Akun Anda Belum di Aktivasi Silahkan Lakukan Pembayaran Pendaftaran Terlebih dahulu!</br>
                 INFO AKTIVASI<br>
                 Ibu Ozah : 089617652507
                 </div>');
@@ -115,7 +115,10 @@ class Auth_siswa extends CI_Controller
             ];
 
             $this->db->insert('user', $data);
-            $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Selamat Akun Anda Berhasil dibuat, Silahkan Login!</div>');
+            $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Selamat Akun Anda Berhasil dibuat, Silahkan Lakukan Pembayaran Pendaftaran untuk Aktivasi Login!</br>
+            INFO AKTIVASI<br>
+            Ibu Ozah : 089617652507
+            </div>');
             redirect('auth_siswa');
         }
     }

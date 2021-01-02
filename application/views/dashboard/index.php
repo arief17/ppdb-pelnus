@@ -30,7 +30,7 @@
 					<a class="nav-link" href="#info-daftar">Aktivasi Pendaftaran</a>
 				</li>
 				<li class="nav-item">
-					<button class="btn-login btn btn-warning btn-sm" data-toggle="modal" data-target="#loginModal">LOGIN</button>
+					<a href="<?php echo base_url()?>auth_siswa" class="btn-login btn btn-warning btn-sm">LOGIN</a>
 				</li>
 			</ul>
 		</div>
@@ -44,8 +44,8 @@
 		<div class="row mt-5">
 				<div class="col-sm-8 col-xs-8 col-md-8 kiri-dashboard text-center">
 				<img src="<?php echo base_url()?>assets/img/slider/pelnus3.jpg">
-						<a href="#" class="btn btn-daftar mt-5">DAFTAR</a>
-						<a href="#" class="btn btn-login-kiri mt-5">LOGIN</a>
+						<a href="<?php echo base_url()?>auth_siswa/registration" class="btn btn-daftar mt-5">DAFTAR</a>
+						<a href="<?php echo base_url()?>auth_siswa" class="btn btn-login-kiri mt-5">LOGIN</a>
 					
 				</div>
 
@@ -77,7 +77,7 @@
 						</div>
 
 						<div class="col-sm-6 col-xs-6 text-center">
-							<a href="#">
+							<a href="#" data-toggle="modal" data-target="#persyaratanModal">
 								<div class="alur-daftar">
 									<div class="alur-image">
 										<i class="fa fa-clone"></i>
@@ -113,7 +113,7 @@
 							</a>
 						</div>
 						<div class="col-sm-6 col-xs-6 text-center">
-							<a href="#">
+							<a href="#" data-toggle="modal" data-target="#jadwalModal">
 								<div class="rincian-biaya">
 									<div class="rincian-image">
 										<i class="fa fa-calendar"></i>
@@ -142,80 +142,31 @@
 
 
 
-	<!-- Modal login -->
-	<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-	<div class="modal-dialog">
-		<div class="modal-content">
-		<div class="modal-header">
-			<h5 class="modal-title" id="exampleModalLabel">Modal Login</h5>
-		</div>
-		<div class="modal-body modal-login">
-		<?= $this->session->flashdata('message'); ?>
-			<form action="<?= base_url('auth_siswa'); ?>" method="post">
-				<div class="form-group">
-					<label for="inoutusername">Username</label>
-					<input type="text" class="form-control" placeholder="Masukan Username Anda">
-				</div>
-				<div class="form-group">
-					<label for="inoutusername">Password</label>
-					<input type="text" class="form-control" placeholder="Masukan Username Anda">
-				</div>
-			</form>
-		</div>
-		<div class="modal-footer">
-			<button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
-			<button type="button" class="btn btn-primary">Login</button>
-		</div>
-		</div>
-	</div>
-	</div>
-	<!-- akhir modal login -->
-
-	<!-- Modal login -->
-	<div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-	<div class="modal-dialog modal-lg">
-		<div class="modal-content">
-		<div class="modal-header">
-			<h5 class="modal-title" id="exampleModalLabel">Modal Register</h5>
-			</button>
-		</div>
-		<div class="modal-body">
-			<form action="#">
-				<div class="form-group">
-					<label for="inoutusername">Username</label>
-					<input type="text" class="form-control" placeholder="Masukan Username Anda">
-				</div>
-			</form>
-		</div>
-		<div class="modal-footer">
-			<button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
-			<button type="button" class="btn btn-primary">Daftar</button>
-		</div>
-		</div>
-	</div>
-	</div>
-	<!-- akhir modal login -->
-
 
 	<!-- Modal Alur Daftar -->
 	<div class="modal fade" id="alurdaftar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
 	<div class="modal-dialog modal-lg dialog-alur">
 		<div class="modal-content">
 		<div class="modal-header">
-			<h5 class="modal-title" id="exampleModalLabel">Alur Pendaftaran</h5>
+			<h5 class="modal-title" id="exampleModalLabel">ALUR PENDAFTARAN SISWA BARU</h5>
 			</button>
 		</div>
 		<div class="modal-body">
 			
 		<!-- isi content alur daftar -->
-
+		<P>1. Lakukan Pendaftaran Akun Siswa di halaman pendaftaran<a href="<?php echo base_url()?>auth_siswa/registration"> Klik disini</a></P>
+		<p>2. Lakukan Pembayaran Pendaftaran <br>
+		Nama Bank : Mandiri<br>
+		No. Rekening   : 09999999999
+		</p>
+		<p>3. Lakukan Konfirmasi Pembayaran agar bisa Login</p>
+		<p>4. Login Ke Aplikasi Untuk Melengkapi Data Pendaftaran</p>
 
 		<!-- akhir isu content daftar -->
 
 		</div>
 		<div class="modal-footer">
-			<button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
-			<button type="button" class="btn btn-primary">Daftar</button>
+			<button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
 		</div>
 		</div>
 	</div>
@@ -351,7 +302,60 @@
 	</div>
 	<!-- akhir modal biaya daftar -->
 
-	
+	<!-- Modal persyaratan -->
+	<div class="modal fade" id="persyaratanModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	<div class="modal-dialog modal-lg">
+	<div class="modal-content">
+	<div class="modal-header">
+	</div>
+	<div class="modal-body modal-persyaratan">
+		<h4>SYARAT PENDAFTARAN</h4><hr>
+		<p>1. Lulusan SMP/MTS</p>
+		<p>2. Mengisi Formulir Pendaftaran yang di isi di halaman pendafataran website ppdb</p>
+		<p>3. Mengupload PAs Foto 3x4 di halaman pendafataran website ppdb</p>
+		<p>4. Mengupload Foto copy Ijasah atau SKHUN yang di legalisir di halaman pendafataran website ppdb</p>
+		<p>5. Mengupload Surat Keterangan Sehat dari di DOkoter di halaman pendafataran website ppdb</p>
+		<p>6. Mengupload Surat Kelakuan Baik dari Sekolah di halaman pendafataran website ppdb</p>
+	</div>
+	<div class="modal-footer">
+		<button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
+	</div>
+	</div>
+	</div>
+	</div>
+	<!-- akhir modal persyaratan -->
+
+	<!-- Modal jadwal -->
+	<div class="modal fade" id="jadwalModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	<div class="modal-dialog modal-lg">
+	<div class="modal-content">
+	<div class="modal-header">
+	</div>
+	<div class="modal-body modal-jadwal">
+		<div class="container">
+		<h4>WAKTU PENDAFTARAN</h4><hr>
+		<h5>Gelombang I</h5>
+		<p>04 Januari - 16 Januari 2021 - Pendaftaran</p>
+		<p>19 April 2021 - Test I (Pilihan)</p>
+		<p>22 April 2021 - Test II</p>
+		<p>24 April 2021 - Pengumuman Hasil Seleksi</p>
+		<p>26 April - 29 April 2021 - Daftar Ulang</p>
+		<br>
+		<h5>Gelombang II</h5>
+		<p>03 Mei - 30 Juni 2021 - Pendaftaran</p>
+		<p>03 Juli 2021 - Test</p>
+		<p>06 Juli 2021 - Pengumuman Hasil Seleksi</p>
+		<p>08 Juli - 10 Juli 2021 - Daftar Ulang</p>
+		</div>
+		
+	</div>
+	<div class="modal-footer">
+		<button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
+	</div>
+	</div>
+	</div>
+	</div>
+	<!-- akhir modal jadwal -->
 
 	<!-- JS dan JQUERY -->
 	<script src="<?php echo base_url()?>assets/js/jquery-3.5.1.min.js"></script>
