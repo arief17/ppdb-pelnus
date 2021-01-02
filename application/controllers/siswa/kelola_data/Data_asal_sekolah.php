@@ -9,7 +9,7 @@ class Data_asal_sekolah extends CI_Controller
         $this->load->view('templates/header', $data);
         $this->load->view('templates/sidebar_siswa', $data);
         $this->load->view('templates/topbar_siswa', $data);
-        $this->load->view('user/kelola_data/data_asal_sekolah', $data);
+        $this->load->view('siswa/kelola_data/data_asal_sekolah', $data);
         $this->load->view('templates/footer');
     }
 }

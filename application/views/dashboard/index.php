@@ -19,25 +19,7 @@
 	<!-- navbar -->
 	<nav class="navbar navbar-expand-lg navbar-light bg-nav mb-5">
 		<div class="container">
-<<<<<<< HEAD
-			<img src="<?php echo base_url() ?>assets/img/logo-baru.png" alt="">
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"></span>
-			</button>
-			<div class="collapse navbar-collapse" id="navbarText">
-				<ul class="navbar-nav ml-auto">
-					<li class="nav-item active">
-						<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#info-daftar">Info Pendaftaran</a>
-					</li>
-					<li class="nav-item">
-						<button class="btn-login btn btn-warning btn-sm" data-toggle="modal" data-target="#loginModal">LOGIN</button>
-					</li>
-				</ul>
-			</div>
-=======
+
 		<img src="<?php echo base_url()?>assets/img/logo-baru.png" alt="">
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon"></span>
@@ -55,7 +37,7 @@
 				</li>
 			</ul>
 		</div>
->>>>>>> ppdb/master
+
 		</div>
 	</nav>
 
@@ -164,31 +146,7 @@
 
 
 
-<<<<<<< HEAD
-		<!-- Modal login -->
-		<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-			<div class="modal-dialog">
-				<div class="modal-content">
-					<div class="modal-header">
-						<h5 class="modal-title" id="exampleModalLabel">Modal Login</h5>
-					</div>
-					<div class="modal-body modal-login">
-						<form action="<?php echo base_url() . 'auth_siswa'; ?>">
-							<div class="form-group">
-								<label for="inoutusername">Username</label>
-								<input type="text" class="form-control" placeholder="Masukan Username Anda" name="user_name">
-							</div>
-							<div class="form-group">
-								<label for="inoutusername">Password</label>
-								<input type="text" class="form-control" placeholder="Masukan Password Anda" name="password">
-							</div>
-						</form>
-					</div>
-					<div class="modal-footer">
-						<button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
-						<button type="submit" class="btn btn-primary">Login</button>
-					</div>
-=======
+
 	<!-- Modal login -->
 	<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
 	<div class="modal-dialog">
@@ -206,7 +164,7 @@
 				<div class="form-group">
 					<label for="inoutusername">Password</label>
 					<input type="text" class="form-control" placeholder="Masukan Username Anda">
->>>>>>> ppdb/master
+
 				</div>
 			</div>
 		</div>

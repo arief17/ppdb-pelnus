@@ -62,7 +62,7 @@
                         <h6 class="m-0 font-weight-bold text-primary">
                             <div class="row">
                                 <div class="">
-                                    DATA AYAH KANDUNG
+                                    DATA PERIODIK
                                 </div>
                             </div>
 
@@ -71,65 +71,65 @@
                     </div>
                 </div>
 
-                <div class="col-md-6">
-                    <?php echo form_open_multipart('user/kelola_data/data_ayah_kandung/tambah'); ?>
-                    <form action="<?php echo base_url() . 'user/kelola_data/data_ayah_kandung/tambah'; ?>" method="post">
+                <div class="col-md-8">
+                    <?php echo form_open_multipart('siswa/kelola_data/data_periodik/tambah'); ?>
+                    <form action="<?php echo base_url() . 'siswa/kelola_data/data_ayah_kandung/tambah'; ?>" method="post">
                         <div class="form-group">
-                            <label for="">Nama Ayah</label>
-                            <input type="text" name="nama_ayah" id="" class="form-control" required>
+                            <label for="">Tinggi Badan</label>
+                            <input type="text" name="tinggi_badan" id="" class="form-control" required>
                         </div>
                         <div class="form-group">
-                            <label for="">Berkebutuhan Khusus</label>
-                            <input type="text" name="berkebutuhan_khusus" id="" class="form-control" required>
+                            <label for="">Berat Badan</label>
+                            <input type="text" name="berat_badan" id="" class="form-control" required>
                         </div>
                         <div class="form-group">
-                            <label for="">Pekerjaan</label>
+                            <label for="">Jarak ke Sekolah</label>
                             <input type="text" name="pekerjaan" id="" class="form-control" required>
                         </div>
                         <div class="form-group">
-                            <label for="">Penghasilan Bulanan</label>
+                            <label for="">Waktu Tempuh ke Sekolah</label>
                             <input type="text" name="" id="" class="form-control" required>
                         </div>
                         <div class="form-group">
-                            <label for="">NISN Siswa</label>
+                            <label for="">Jumlah Saudara Kandung</label>
                             <input type="text" name="nisn" class="form-control" required>
                         </div>
                     </form>
                 </div>
 
-                </form>
+
 
             </div>
 
 
 
+
+            <div class="row">
+                <div class="col-md-10">
+                    <a href="<?= base_url('siswa/kelola_data/data_prestasi') ?>" class="btn btn-outline-warning "><i class="fas fa-arrow-left mr-1"></i>Sebelumya</a>
+                </div>
+                <div class="col-md-2">
+                    <a href="<?= base_url('siswa/kelola_data/data_') ?>" class="btn btn-outline-primary "><i class="fas fa-arrow-right mr-1"></i>Selanjutnya</a>
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+
+        </section>
+        <!-- section content -->
+
+
+
+
+
     </div>
-    <div class="row">
-        <div class="col-md-10">
-            <a href="<?= base_url('user/kelola_data/daftar') ?>" class="btn btn-outline-warning "><i class="fas fa-arrow-left mr-1"></i>Sebelumya</a>
-        </div>
-        <div class="col-md-2">
-            <a href="<?= base_url('user/kelola_data/data_asal_sekolah') ?>" class="btn btn-outline-primary "><i class="fas fa-arrow-right mr-1"></i>Selanjutnya</a>
-        </div>
-    </div>
-
-
-
-
-
-
-
-
-
-    </section>
-    <!-- section content -->
-
-
-
-
-
-</div>
-<!-- /.container-fluid -->
+    <!-- /.container-fluid -->
 
 </div>
 </div>

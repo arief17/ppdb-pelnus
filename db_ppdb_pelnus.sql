@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 29, 2020 at 07:47 AM
+-- Generation Time: Dec 31, 2020 at 03:12 PM
 -- Server version: 10.4.13-MariaDB
 -- PHP Version: 7.2.32
 
@@ -33,7 +33,8 @@ CREATE TABLE `data_ayah_kandung` (
   `berkebutuhan_khusus` varchar(128) NOT NULL,
   `pekerjaan` varchar(50) NOT NULL,
   `pendidikan` varchar(20) NOT NULL,
-  `penghasilan_bulanan` int(11) NOT NULL
+  `penghasilan_bulanan` int(11) NOT NULL,
+  `nisn` varchar(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -48,7 +49,66 @@ CREATE TABLE `data_ibu_kandung` (
   `berkebutuhan_khusus` varchar(128) NOT NULL,
   `pekerjaan` varchar(50) NOT NULL,
   `pendidikan` varchar(20) NOT NULL,
-  `penghasilan_bulanan` int(11) DEFAULT NULL
+  `penghasilan_bulanan` int(11) DEFAULT NULL,
+  `nisn` varchar(10) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `data_periodik`
+--
+
+CREATE TABLE `data_periodik` (
+  `tinggi_badan` varchar(10) NOT NULL,
+  `berat_badan` varchar(10) NOT NULL,
+  `jarak_kesekolah` varchar(10) NOT NULL,
+  `waktu_tempuh_kesekolah` varchar(15) NOT NULL,
+  `jumlah_saudara_kandung` int(2) NOT NULL,
+  `nisn` varchar(10) NOT NULL,
+  `id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `data_prestasi`
+--
+
+CREATE TABLE `data_prestasi` (
+  `id` int(11) NOT NULL,
+  `jenis_prestasi` varchar(128) NOT NULL,
+  `tingkat` varchar(50) NOT NULL,
+  `nama_prestasi` varchar(128) NOT NULL,
+  `tahun` date NOT NULL,
+  `penyelenggara` varchar(128) NOT NULL,
+  `nisn` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `data_wali`
+--
+
+CREATE TABLE `data_wali` (
+  `id` int(11) NOT NULL,
+  `nama_ibu` varchar(100) NOT NULL,
+  `pekerjaan` varchar(50) NOT NULL,
+  `pendidikan` varchar(20) NOT NULL,
+  `penghasilan` varchar(20) NOT NULL,
+  `nisn` varchar(10) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `kompetensi_keahlian`
+--
+
+CREATE TABLE `kompetensi_keahlian` (
+  `id` int(11) NOT NULL,
+  `nama_kompetensi` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -58,7 +118,6 @@ CREATE TABLE `data_ibu_kandung` (
 --
 
 CREATE TABLE `siswa` (
-  `id` int(11) NOT NULL,
   `nama_lengkap` varchar(50) NOT NULL,
   `jenis_kelamin` varchar(10) NOT NULL,
   `nisn` varchar(10) NOT NULL,
@@ -97,6 +156,7 @@ CREATE TABLE `user` (
   `name` varchar(50) NOT NULL,
   `user_name` varchar(128) NOT NULL,
   `password` varchar(256) NOT NULL,
+  `no_hp` varchar(15) NOT NULL,
   `role_id` int(11) NOT NULL,
   `is_active` int(1) NOT NULL,
   `image` varchar(128) NOT NULL,
@@ -107,9 +167,9 @@ CREATE TABLE `user` (
 -- Dumping data for table `user`
 --
 
-INSERT INTO `user` (`id`, `name`, `user_name`, `password`, `role_id`, `is_active`, `image`, `date_created`) VALUES
-(3, 'Mustafa Muchtar', 'adminppdb2020', '$2y$10$dD2Bvp5ABacEAuLnVLnuHeKGK0fPdEziA6C7EUuNjniX9F0zqPDoS', 1, 1, 'default.png', 0),
-(4, 'Nurul Hotimah', '0048471370', '$2y$10$eIjQliDuboduEXSJVF.4COGvgjPbGSlqCM1mY1OoVpBV0W5WLETAO', 2, 1, 'default.png', 20201228);
+INSERT INTO `user` (`id`, `name`, `user_name`, `password`, `no_hp`, `role_id`, `is_active`, `image`, `date_created`) VALUES
+(3, 'Mustafa Muchtar', 'adminppdb2020', '$2y$10$dD2Bvp5ABacEAuLnVLnuHeKGK0fPdEziA6C7EUuNjniX9F0zqPDoS', '', 1, 1, 'default.png', 0),
+(9, 'Nurul Hotimah', '0048471370', '$2y$10$NK5KfAFJQPuppav2y0hApe8FtgzzkBwTSLSTp//G9.1htk38vZhVW', '083872929016', 3, 1, 'default.png', 1609307218);
 
 -- --------------------------------------------------------
 
@@ -128,7 +188,8 @@ CREATE TABLE `user_role` (
 
 INSERT INTO `user_role` (`id`, `role`) VALUES
 (1, 'admin'),
-(2, 'kepsek');
+(2, 'kepsek'),
+(3, 'siswa');
 
 --
 -- Indexes for dumped tables
@@ -138,19 +199,47 @@ INSERT INTO `user_role` (`id`, `role`) VALUES
 -- Indexes for table `data_ayah_kandung`
 --
 ALTER TABLE `data_ayah_kandung`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `nisn` (`nisn`);
 
 --
 -- Indexes for table `data_ibu_kandung`
 --
 ALTER TABLE `data_ibu_kandung`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `nisn` (`nisn`);
+
+--
+-- Indexes for table `data_periodik`
+--
+ALTER TABLE `data_periodik`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `nisn` (`nisn`);
+
+--
+-- Indexes for table `data_prestasi`
+--
+ALTER TABLE `data_prestasi`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `data_wali`
+--
+ALTER TABLE `data_wali`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `nisn` (`nisn`);
+
+--
+-- Indexes for table `kompetensi_keahlian`
+--
+ALTER TABLE `kompetensi_keahlian`
   ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `siswa`
 --
 ALTER TABLE `siswa`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`nisn`);
 
 --
 -- Indexes for table `user`
@@ -181,22 +270,40 @@ ALTER TABLE `data_ibu_kandung`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `siswa`
+-- AUTO_INCREMENT for table `data_periodik`
 --
-ALTER TABLE `siswa`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+ALTER TABLE `data_periodik`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `data_prestasi`
+--
+ALTER TABLE `data_prestasi`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `data_wali`
+--
+ALTER TABLE `data_wali`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `kompetensi_keahlian`
+--
+ALTER TABLE `kompetensi_keahlian`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `user_role`
 --
 ALTER TABLE `user_role`
-  MODIFY `id` int(1) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(1) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

@@ -1,11 +1,5 @@
 <!DOCTYPE html>
-<html>
-
-<head>
-    <title></title>
-</head>
-
-<body>
+<html><head><title></title></head><body>
     <table class="table bg-white border-success">
         <tr>
             <th class="h5 m-0 font-weight-bold text-primary">DATA SISWA</th>
@@ -47,10 +41,5 @@
         </tbody>
     </table> -->
 
-    <script type="text/javascript">
-        window.print();
-    </script>
 
-</body>
-
-</html>
+</body></html>

@@ -16,13 +16,27 @@ class Daftar extends CI_Controller
         $this->load->view('templates/header', $data);
         $this->load->view('templates/sidebar_siswa', $data);
         $this->load->view('templates/topbar_siswa', $data);
-        $this->load->view('user/kelola_data/daftar', $data);
+        $this->load->view('siswa/kelola_data/daftar', $data);
         $this->load->view('templates/footer');
     }
-    public function print()
+    public function pdf()
     {
-        $data['siswa'] = $this->m_siswa->tampil_data("siswa")->result();
-        $this->load->view('user/kelola_data/print_siswa', $data);
+        $this->load->library('dompdf_gen');
+
+        $data['siswa'] = $this->m_siswa->tampil_data('siswa')->result();
+
+        $this->load->view('siswa/kelola_data/print_siswa', $data);
+
+        // setting page
+        $paper_size     = 'A4';
+        $orientation     = 'landscape';
+        $html             = $this->output->get_output();
+        $this->dompdf->set_paper($paper_size, $orientation);
+
+        // convert pdf
+        $this->dompdf->load_html($html);
+        $this->dompdf->render();
+        $this->dompdf->stream("laporan siswa.pdf", array('Attachment' => 0));
     }
 
     public function tambah()

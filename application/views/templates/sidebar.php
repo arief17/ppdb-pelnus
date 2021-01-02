@@ -49,6 +49,13 @@
     <div class="sidebar-heading text-dark">
         Menu
     </div>
+
+    <li class="nav-item active">
+        <a href="<?= base_url('admin/data_siswa/aktivasi_akun_siswa')?>" class="nav-link">
+            <i class="fas fa-fw fa-globe text-dark"></i>
+            <span class="text-black-50">Aktivasi Akun Siswa</span>
+        </a>
+    </li>
     <li class="nav-item active">
         <a class="nav-link" href="#" data-toggle="collapse" data-target="#collapsePages2" aria-expanded="true" aria-controls="collapsePages">
             <i class="fas fa-fw fa-th-large text-black-50"></i>
