@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
 
-class Auth_siswa extends CI_Controller
+class Auth extends CI_Controller
 {
     public function __construct()
     {
@@ -21,7 +21,7 @@ class Auth_siswa extends CI_Controller
         if ($this->form_validation->run() == false) {
             $data['title'] = 'Login|Siswa';
             $this->load->view('templates/auth_header', $data);
-            $this->load->view('auth_siswa/login', $data);
+            $this->load->view('auth/login', $data);
             $this->load->view('templates/auth_footer');
         } else {
             // validasinya succes
@@ -53,28 +53,26 @@ class Auth_siswa extends CI_Controller
 
                     if ($user['role_id'] == 1) {
                         redirect('admin/kepsek');
-
-                    } else if($user['role_id'] == 2) {
-                            redirect('admin/admin');
-                    }
-                    else {
+                    } else if ($user['role_id'] == 2) {
+                        redirect('admin/admin');
+                    } else {
 
                         redirect('siswa/siswa');
                     }
                 } else {
                     $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">Password Salah!</div>');
-                    redirect('auth_siswa');
+                    redirect('auth');
                 }
             } else {
                 $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">Akun Anda Belum di Aktivasi Silahkan Lakukan Pembayaran Pendaftaran Terlebih dahulu!</br>
                 INFO AKTIVASI<br>
                 Ibu Ozah : 089617652507
                 </div>');
-                redirect('auth_siswa');
+                redirect('auth');
             }
         } else {
             $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">Email Tidak Terdaftar</div>');
-            redirect('auth_siswa');
+            redirect('auth');
         }
     }
 
@@ -100,7 +98,7 @@ class Auth_siswa extends CI_Controller
         if ($this->form_validation->run() == false) {
             $data['title'] = 'Pendaftaran|Siswa';
             $this->load->view('templates/auth_header', $data);
-            $this->load->view('auth_siswa/registration');
+            $this->load->view('auth/registration');
             $this->load->view('templates/auth_footer');
         } else {
             $data = [
@@ -116,7 +114,7 @@ class Auth_siswa extends CI_Controller
 
             $this->db->insert('user', $data);
             $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Selamat Akun Anda Berhasil dibuat, Silahkan Login!</div>');
-            redirect('auth_siswa');
+            redirect('auth');
         }
     }
 
@@ -128,6 +126,6 @@ class Auth_siswa extends CI_Controller
 
         $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Anda Berhasil Keluar!
         </div>');
-        redirect('auth_siswa');
+        redirect('auth');
     }
 }

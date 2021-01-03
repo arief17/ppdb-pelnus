@@ -71,40 +71,35 @@
                     </div>
                 </div>
 
-                <div class="col-md-8">
-                    <?php echo form_open_multipart('siswa/kelola_data/data_periodik/tambah'); ?>
-                    <form action="<?php echo base_url() . 'siswa/kelola_data/data_ayah_kandung/tambah'; ?>" method="post">
-                        <div class="form-group">
-                            <label for="">Tinggi Badan</label>
-                            <input type="text" name="tinggi_badan" id="" class="form-control" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="">Berat Badan</label>
-                            <input type="text" name="berat_badan" id="" class="form-control" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="">Jarak ke Sekolah</label>
-                            <input type="text" name="pekerjaan" id="" class="form-control" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="">Waktu Tempuh ke Sekolah</label>
-                            <input type="text" name="" id="" class="form-control" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="">Jumlah Saudara Kandung</label>
-                            <input type="text" name="nisn" class="form-control" required>
-                        </div>
-                    </form>
+                <div class="col-md-12  bg-gradient-info">
+                    <div class="col-md-6 ">
+                        <?php echo form_open_multipart('siswa/kelola_data/data_periodik/tambah'); ?>
+                        <form action="<?php echo base_url() . 'siswa/kelola_data/data_periodik/tambah'; ?>" method="post">
+                            <div class="form-group">
+                                <label for="" class="text-dark">Tinggi Badan</label>
+                                <input type="text" name="tinggi_badan" id="" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="" class="text-dark">Berat Badan</label>
+                                <input type="text" name="berat_badan" id="" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="" class="text-dark">Jarak ke Sekolah</label>
+                                <input type="text" name="pekerjaan" id="" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="" class="text-dark">Waktu Tempuh ke Sekolah</label>
+                                <input type="text" name="" id="" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="" class="text-dark">Jumlah Saudara Kandung</label>
+                                <input type="text" name="nisn" class="form-control" required>
+                            </div>
+
+                    </div>
                 </div>
-
-
-
             </div>
-
-
-
-
-            <div class="row">
+            <div class="row mt-4">
                 <div class="col-md-10">
                     <a href="<?= base_url('siswa/kelola_data/data_wali') ?>" class="btn btn-outline-warning "><i class="fas fa-arrow-left mr-1"></i>Sebelumya</a>
                 </div>
@@ -112,6 +107,7 @@
                     <a href="<?= base_url('siswa/kelola_data/data_prestasi') ?>" class="btn btn-outline-primary "><i class="fas fa-arrow-right mr-1"></i>Selanjutnya</a>
                 </div>
             </div>
+            </form>
 
 
 

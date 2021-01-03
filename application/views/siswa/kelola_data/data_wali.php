@@ -70,37 +70,32 @@
                         </h6>
                     </div>
                 </div>
+                <div class="col-md-12 bg-gradient-info">
+                    <div class="col-md-6">
+                        <?php echo form_open_multipart('user/kelola_data/data_ayah_kandung/tambah'); ?>
+                        <form action="<?php echo base_url() . 'user/kelola_data/data_ayah_kandung/tambah'; ?>" method="post">
+                            <div class="form-group">
+                                <label for="" class="text-dark">Nama Ibu</label>
+                                <input type="text" name="nama_ayah" id="" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="" class="text-dark">Pekerjaan</label>
+                                <input type="text" name="pekerjaan" id="" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="" class="text-dark">Pendidikan</label>
+                                <input type="text" name="pendidikan" id="" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="" class="text-dark">Penghasilan Bulanan</label>
+                                <input type="text" name="" id="" class="form-control" required>
+                            </div>
 
-                <div class="col-md-6">
-                    <?php echo form_open_multipart('user/kelola_data/data_ayah_kandung/tambah'); ?>
-                    <form action="<?php echo base_url() . 'user/kelola_data/data_ayah_kandung/tambah'; ?>" method="post">
-                        <div class="form-group">
-                            <label for="">Nama Ibu</label>
-                            <input type="text" name="nama_ayah" id="" class="form-control" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="">Pekerjaan</label>
-                            <input type="text" name="pekerjaan" id="" class="form-control" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="">Pendidikan</label>
-                            <input type="text" name="pendidikan" id="" class="form-control" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="">Penghasilan Bulanan</label>
-                            <input type="text" name="" id="" class="form-control" required>
-                        </div>
-                    </form>
+                    </div>
                 </div>
 
-                </form>
-
-
-
-
-
             </div>
-            <div class="row">
+            <div class="row mt-4">
                 <div class="col-md-10">
                     <a href="<?= base_url('siswa/kelola_data/data_ibu_kandung') ?>" class="btn btn-outline-warning "><i class="fas fa-arrow-left mr-1"></i>Sebelumya</a>
                 </div>
@@ -108,6 +103,7 @@
                     <a href="<?= base_url('siswa/kelola_data/data_periodik') ?>" class="btn btn-outline-primary "><i class="fas fa-arrow-right mr-1"></i>Selanjutnya</a>
                 </div>
             </div>
+            </form>
 
 
 

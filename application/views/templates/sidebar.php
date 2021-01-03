@@ -1,10 +1,10 @@
 <!-- Sidebar -->
-<ul class="navbar-nav bg-gradient sidebar sidebar-dark accordion " id="accordionSidebar">
+<ul class="navbar-nav bg-primary sidebar sidebar-dark accordion " id="accordionSidebar">
 
     <!-- Sidebar - Brand -->
     <a class="sidebar-brand d-flex align-items-center justify-content-center">
         <div class="sidebar-brand-icon ">
-            <img src="<?= base_url() ?>assets/img/pelnus/logo.ico" width="40px" alt="">
+            <img src="<?= base_url() ?>assets_admin/img/pelnus/logo.ico" width="40px" alt="">
         </div>
         <div class="text-dark ml-2">Panel Admin</div>
     </a>
@@ -51,18 +51,18 @@
     </div>
 
     <li class="nav-item active">
-        <a href="<?= base_url('admin/data_siswa/aktivasi_akun_siswa')?>" class="nav-link">
-            <i class="fas fa-fw fa-globe text-dark"></i>
+        <a href="<?= base_url('admin/data_siswa/aktivasi_akun_siswa') ?>" class="nav-link">
+            <i class="fas fa-fw fa-user-circle text-black-50"></i>
             <span class="text-black-50">Aktivasi Akun Siswa</span>
         </a>
     </li>
     <li class="nav-item active">
-        <a class="nav-link" href="#" data-toggle="collapse" data-target="#collapsePages2" aria-expanded="true" aria-controls="collapsePages">
+        <a class="nav-link" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true" aria-controls="collapsePages">
             <i class="fas fa-fw fa-th-large text-black-50"></i>
             <span class="text-black-50">Berita PPDB</span>
         </a>
 
-        <div id="collapsePages2" class="collapse show" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+        <div id="collapsePages" class="collapse show" aria-labelledby="headingPages" data-parent="#accordionSidebar">
             <div class="bg-light py-2 collapse-inner rounded">
 
                 <a class="collapse-item" href="<?= base_url('carousel'); ?>">
@@ -78,19 +78,19 @@
         </div>
     </li>
     <li class="nav-item active">
-        <a href="" class="nav-link">
-            <i class="fas fa-fw fa-globe text-dark"></i>
+        <a href="<?= base_url('admin/identitas_sekolah') ?>" class="nav-link">
+            <i class="fas fa-fw fa-globe text-black-50"></i>
             <span class="text-black-50">Identitas Sekolah</span>
         </a>
     </li>
 
     <!-- Menu data Siswa -->
     <li class="nav-item active">
-        <a class="nav-link " href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true" aria-controls="collapsePages">
+        <a class="nav-link " href="#" data-toggle="collapse" data-target="#collapsePages2" aria-expanded="true" aria-controls="collapsePages">
             <i class="fas fa-fw fa-folder text-black-50"></i>
             <span class="text-black-50">Data Siswa</span>
         </a>
-        <div id="collapsePages" class="collapse show" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+        <div id="collapsePages2" class="collapse show" aria-labelledby="headingPages" data-parent="#accordionSidebar">
             <div class="bg-light py-2 collapse-inner rounded">
 
                 <a class="collapse-item" href="<?= base_url('admin/data_siswa/belum_diverifikasi'); ?>">
@@ -113,17 +113,18 @@
             </div>
         </div>
     </li>
+
     <!-- Akhir Menu data Siswa -->
 
 
 
     <!-- Menu Pengguna -->
     <li class="nav-item active">
-        <a class="nav-link " href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true" aria-controls="collapsePages">
+        <a class="nav-link " href="#" data-toggle="collapse" data-target="#collapsePages4" aria-expanded="true" aria-controls="collapsePages">
             <i class="fas fa-fw fa-folder text-black-50"></i>
             <span class="text-black-50">Pengguna</span>
         </a>
-        <div id="collapsePages" class="collapse show" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+        <div id="collapsePages4" class="collapse show" aria-labelledby="headingPages" data-parent="#accordionSidebar">
             <div class="bg-light py-2 collapse-inner rounded">
 
                 <a class="collapse-item" href="<?= base_url('berita'); ?>">
@@ -159,11 +160,11 @@
 
     <!-- Menu Pengaturan -->
     <li class="nav-item active">
-        <a class="nav-link " href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true" aria-controls="collapsePages">
+        <a class="nav-link " href="#" data-toggle="collapse" data-target="#collapsePages3" aria-expanded="true" aria-controls="collapsePages">
             <i class="fas fa-fw fa-folder text-black-50"></i>
             <span class="text-black-50">Pengaturan</span>
         </a>
-        <div id="collapsePages" class="collapse show" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+        <div id="collapsePages3" class="collapse show" aria-labelledby="headingPages" data-parent="#accordionSidebar">
             <div class="bg-light py-2 collapse-inner rounded">
 
                 <a class="collapse-item" href="<?= base_url('berita'); ?>">

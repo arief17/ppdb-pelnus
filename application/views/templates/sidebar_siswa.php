@@ -21,15 +21,11 @@
 
     <!-- Nav Item -Profile -->
     <li class="nav-item">
-        <a class="nav-link" href="<?= base_url('user/user'); ?>">
+        <a class="nav-link" href="<?= base_url('siswa/siswa'); ?>">
             <i class="fas fa-fw fa-user text-black-50"></i>
             <span class="text-black-50">My Profile</span></a>
     </li>
-    <!-- <li class="nav-item">
-        <a class="nav-link" href="<?= base_url('user/edit'); ?>">
-            <i class="fas fa-fw fa-user-edit"></i>
-            <span> Edit My Profile</span></a>
-    </li> -->
+
 
     <hr class="sidebar-divider ">
     <!-- Heading -->
@@ -66,7 +62,7 @@
 
 
     <li class="nav-item">
-        <a class="nav-link" href="<?= base_url('login_siswa/login_registrasi/logout'); ?>">
+        <a class="nav-link" href="<?= base_url('auth/logout'); ?>">
             <i class="fas fa-fw fa-sign-out-alt  text-black-50"></i>
             <span class=" text-black-50">Logout</span></a>
     </li>

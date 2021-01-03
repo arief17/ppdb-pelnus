@@ -62,7 +62,7 @@
                         <h6 class="m-0 font-weight-bold text-primary">
                             <div class="row">
                                 <div class="">
-                                    DATA AYAH KANDUNG
+                                    DATA PRESTASI
                                 </div>
                             </div>
 
@@ -71,44 +71,42 @@
                     </div>
                 </div>
 
-                <div class="col-md-12 bg-gradient-info">
-                    <div class="col-md-6 ">
-                        <?php echo form_open_multipart('user/kelola_data/data_ayah_kandung/tambah'); ?>
-                        <form action="<?php echo base_url() . 'user/kelola_data/data_ayah_kandung/tambah'; ?>" method="post">
+                <div class="col-md-12  bg-gradient-info">
+                    <div class="col-md-6">
+                        <?php echo form_open_multipart('siswa/kelola_data/data_prestasi/tambah'); ?>
+                        <form action="<?php echo base_url() . 'siswa/kelola_data/data_prestasi/tambah'; ?>" method="post">
                             <div class="form-group">
-                                <label for="" class="text-dark">Nama Ayah</label>
-                                <input type="text" name="nama_ayah" id="" class="form-control" required>
+                                <label for="" class="text-dark">Jenis Prestasi</label>
+                                <input type="text" name="jenis_prestasi" id="" class="form-control" required>
                             </div>
                             <div class="form-group">
-                                <label for="" class="text-dark">Berkebutuhan Khusus</label>
-                                <input type="text" name="berkebutuhan_khusus" id="" class="form-control" required>
+                                <label for="" class="text-dark">Tingkat</label>
+                                <input type="text" name="tingkat" id="" class="form-control" required>
                             </div>
                             <div class="form-group">
-                                <label for="" class="text-dark">Pekerjaan</label>
-                                <input type="text" name="pekerjaan" id="" class="form-control" required>
+                                <label for="" class="text-dark">Nama Prestasi</label>
+                                <input type="text" name="nama_prestasi" id="" class="form-control" required>
                             </div>
                             <div class="form-group">
-                                <label for="" class="text-dark">Pendidikan</label>
-                                <input type="text" name="pendidikan" id="" class="form-control" required>
+                                <label for="" class="text-dark">Tahun</label>
+                                <input type="text" name="tahun" id="" class="form-control" required>
                             </div>
                             <div class="form-group">
-                                <label for="" class="text-dark">Penghasilan Bulanan</label>
-                                <input type="text" name="penghasilan_bulanan" id="" class="form-control" required>
+                                <label for="" class="text-dark">Penyelenggara</label>
+                                <input type="text" name="penyelenggara" id="" class="form-control" required>
                             </div>
                     </div>
                 </div>
             </div>
-
             <div class="row mt-4">
                 <div class="col-md-10">
-                    <a href="<?= base_url('siswa/kelola_data/daftar') ?>" class="btn btn-outline-warning "><i class="fas fa-arrow-left mr-1"></i>Sebelumya</a>
+                    <a href="<?= base_url('siswa/kelola_data/data_periodik') ?>" class="btn btn-outline-warning "><i class="fas fa-arrow-left mr-1"></i>Sebelumya</a>
                 </div>
                 <div class="col-md-2">
-                    <a type="submit" href="<?= base_url('siswa/kelola_data/data_ibu_kandung') ?>" class="btn btn-outline-primary "><i class="fas fa-arrow-right mr-1"></i>Selanjutnya</a>
+                    <a href="<?= base_url('siswa/kelola_data/data_periodik') ?>" class="btn btn-outline-primary "><i class="fas fa-arrow-right mr-1"></i>Selanjutnya</a>
                 </div>
             </div>
             </form>
-
 
 
 

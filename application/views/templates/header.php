@@ -12,7 +12,7 @@
     <title>
         <?= $judul; ?>
     </title>
-    <link rel="shortcut icon" href="assets/img/pelnus/logo.ico">
+    <link rel="shortcut icon" href="<?= base_url() ?>assets_admin/img/pelnus/logo.ico">
 
 
     <!-- Custom fonts for this template-->

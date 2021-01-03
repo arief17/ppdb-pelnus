@@ -13,7 +13,7 @@
         <section class="content">
 
             <div class="row">
-                <div class="col-md-12">
+                <div class="col-md-12 ">
                     <nav class="nav nav-fill bg-gray-400">
                         <div class="col-md-2">
                             <li class="nav-item">
@@ -51,16 +51,16 @@
                     </div>
                 </div>
 
-                <div class="col-md-6">
+                <div class="col-md-6 bg-gradient-info">
                     <?php echo form_open_multipart('user/kelola_data/daftar/tambah'); ?>
                     <form action="<?php echo base_url() . 'user/kelola_data/daftar/tambah'; ?>" method="post">
                         <div class="form-group">
-                            <label for="">Nama Lengkap</label>
+                            <label for="" class="text-dark">Nama Lengkap</label>
                             <input type="text" name="nama_lengkap" class="form-control" required>
                         </div>
 
                         <div class="form-group">
-                            <label for="">Jenis Kelamin</label>
+                            <label for="" class="text-dark">Jenis Kelamin</label>
                             <div class="row">
                                 <div class="col-md-3">
                                     <div class="form-check">
@@ -82,37 +82,37 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="">NISN</label>
+                            <label for="" class="text-dark">NISN</label>
                             <input type="text" name="nisn" class="form-control" required>
                         </div>
 
                         <div class="form-group">
-                            <label for="">Nomor Seri Ijazah SMP/MTS</label>
+                            <label for="" class="text-dark">Nomor Seri Ijazah SMP/MTS</label>
                             <input type="text" name="no_seri_ijazah_smp" class="form-control" required>
                         </div>
 
                         <div class="form-group">
-                            <label for="">Nomor Seri SHUN</label>
+                            <label for="" class="text-dark">Nomor Seri SHUN</label>
                             <input type="text" name="no_seri_shun" class="form-control" required>
                         </div>
 
                         <div class="form-group">
-                            <label for="">Nomor UN SMP/MTS</label>
+                            <label for="" class="text-dark">Nomor UN SMP/MTS</label>
                             <input type="text" name="no_un_smp_mts" class="form-control" required>
                         </div>
 
                         <div class="form-group">
-                            <label for="">NIK</label>
+                            <label for="" class="text-dark">NIK</label>
                             <input type="text" name="nik_siswa" class="form-control" required>
                         </div>
 
                         <div class="form-group">
-                            <label for="">Tempat Tanggal Lahir</label>
+                            <label for="" class="text-dark">Tempat Tanggal Lahir</label>
                             <input type="text" name="ttl" class="form-control" placeholder="Contoh:Serang,04,Januari,2020" required>
                         </div>
 
                         <div class="form-group">
-                            <label for="">Agama</label>
+                            <label for="" class="text-dark">Agama</label>
                             <select class="custom-select" name="agama">
                                 <option selected>--Silahkan Pilih Agama</option>
                                 <option value="Islam">Islam</option>
@@ -122,86 +122,86 @@
                         </div>
 
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-6 bg-gradient-info">
 
                     <div class="form-group">
-                        <label for="">Berkebutuhan Khusus</label>
+                        <label for="" class="text-dark">Berkebutuhan Khusus</label>
                         <input type="text" name="berkebutuhan_khusus" class="form-control" required>
                     </div>
 
                     <div class="form-group">
-                        <label for="">Alamat Tempat Tinggal</label>
+                        <label for="" class="text-dark">Alamat Tempat Tinggal</label>
                         <textarea class="form-control" id="exampleFormControlTextarea1" name="alamat_tempat_tinggal"></textarea>
                     </div>
 
                     <div class="form-row">
                         <div class="col-7">
-                            <label for="">Dusun</label>
+                            <label for="" class="text-dark">Dusun</label>
                             <input type="text" class="form-control" name="dusun">
                         </div>
                         <div class="col">
-                            <label for="">Rt</label>
+                            <label for="" class="text-dark">Rt</label>
                             <input type="text" class="form-control" name="rt">
                         </div>
                         <div class="col">
-                            <label for="">Rw</label>
+                            <label for="" class="text-dark">Rw</label>
                             <input type="text" class="form-control" name="rw">
                         </div>
                     </div>
 
                     <div class="form-row">
                         <div class="col-7">
-                            <label for="">Kelurahan/Desa</label>
+                            <label for="" class="text-dark">Kelurahan/Desa</label>
                             <input type="text" class="form-control" name="kelurahan_desa">
                         </div>
                         <div class="col">
-                            <label for="">Kode Pos</label>
+                            <label for="" class="text-dark">Kode Pos</label>
                             <input type="text" class="form-control" name="kd_pos">
                         </div>
                     </div>
 
                     <div class="form-row">
                         <div class="col-4">
-                            <label for="">Kecamatan</label>
+                            <label for="" class="text-dark">Kecamatan</label>
                             <input type="text" class="form-control" name="kecamatan">
                         </div>
                         <div class="col-4">
-                            <label for="">Kabupaten</label>
+                            <label for="" class="text-dark">Kabupaten</label>
                             <input type="text" class="form-control" name="kabupaten_kota">
                         </div>
                         <div class="col-4">
-                            <label for="">Provinsi</label>
+                            <label for="" class="text-dark">Provinsi</label>
                             <input type="text" class="form-control" name="provinsi">
                         </div>
                     </div>
 
                     <div class="form-group">
-                        <label for="">Alat Transportasi ke Sekolah</label>
+                        <label for="" class="text-dark">Alat Transportasi ke Sekolah</label>
                         <input type="text" name="alat_transportasi" class="form-control" required>
                     </div>
 
                     <div class="form-group">
-                        <label for="">Jenis Tinggal</label>
+                        <label for="" class="text-dark">Jenis Tinggal</label>
                         <input type="text" name="jenis_tinggal" class="form-control" required>
                     </div>
 
                     <div class="form-group">
-                        <label for="">No Telpon Rumah / HP</label>
+                        <label for="" class="text-dark">No Telpon Rumah / HP</label>
                         <input type="text" name="no_telp_rumah" class="form-control" required>
                     </div>
 
                     <div class="form-group">
-                        <label for="">Email</label>
+                        <label for="" class="text-dark">Email</label>
                         <input type="email" name="email" class="form-control" required>
                     </div>
 
                     <div class="form-row">
                         <div class="col-7">
-                            <label for="">Penerima KPS</label>
+                            <label for="" class="text-dark">Penerima KPS</label>
                             <input type="text" class="form-control" name="penerima_kps" placeholder="Tulis ya/tidak">
                         </div>
                         <div class="col">
-                            <label for="">No KPS</label>
+                            <label for="" class="text-dark">No KPS</label>
                             <input type="text" class="form-control" name="no_kps">
                         </div>
                     </div>
@@ -211,7 +211,7 @@
                 </div>
             </div>
 
-            <div class="row">
+            <div class="row mt-4">
                 <div class="col-md-10">
                     <button href="" class="btn btn-outline-warning "><i class="fas fa-arrow-left mr-1"></i>Sebelumya</button>
                 </div>

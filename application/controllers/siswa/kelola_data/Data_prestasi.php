@@ -29,7 +29,7 @@ class Data_prestasi extends CI_Controller
             'penyelenggara'             => $penyelenggara,
             'nisn'                      => $nisn
         );
-        $this->m_ibu->input_data($data, 'data_prestasi');
+        $this->m_prestasi->input_data($data, 'data_prestasi');
         $this->session->set_flashdata('flash', 'Ditambahkan');
 
         redirect('siswa/kelola_data/data_periodik');
