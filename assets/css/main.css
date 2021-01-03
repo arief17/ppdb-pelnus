@@ -42,6 +42,18 @@ body{
     font-size: 100px;
 }
 
+.syarat-daftar .card-body i{
+    font-size: 100px;
+}
+
+.jadwal-daftar .card-body i{
+    font-size: 100px;
+}
+
+.contact-person .card-body i{
+    font-size: 100px;
+}
+
 .content-dev{
     height: 480px;
     margin-top: -660px;
@@ -64,6 +76,11 @@ body{
     
 }
 
+.box-info-login{
+    margin-top: -160px;
+    
+}
+
 .slider-bg img{
     height: 660px;
     width: 100%;
@@ -74,6 +91,16 @@ body{
    box-shadow: 10px 5px #1E90FF);
 }
 
+.box-info a{
+    text-decoration: none !important;
+}
+
+.box-info a:hover{
+    color: aqua;
+}
+
+
+
 
 @media only screen and (max-width: 600px) {
     .box-info{
@@ -82,11 +109,31 @@ body{
         
     }
 
+    .box-info .box-persyaratan a{
+        text-decoration: none;
+    }
+
     .content-dev h5{
         margin-top: 100px;
         font-size: 30px;
         color: #fff
     }
+
+    .box-persyaratan {
+        margin-bottom: 10px;
+     }
+
+     .box-biaya {
+        margin-bottom: 10px;
+     }
+
+     .box-syarat-daftar {
+        margin-bottom: 10px;
+     }
+     
+     .box-jadwal {
+        margin-bottom: 10px;
+     }
 
 }
 

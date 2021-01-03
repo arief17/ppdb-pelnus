@@ -29,9 +29,8 @@
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav ml-auto">
             <a class="nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
-            <a class="nav-link" href="#">Features</a>
-            <a class="nav-link" href="#">Pricing</a>
-            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+            <a class="nav-link" href="#">Aktivasi Pembayaran</a>
+            <a class="nav-link btn btn-primary" href="<?php echo base_url()?>auth_siswa" style="color:#fff">Login</a>
             </div>
         </div>
 </div>
@@ -69,10 +68,10 @@
 
     <div class="card text-center">
         <div class="card-body content-dev">
-            <h5 class="card-title">TELAH DI BUKA PENDAFTARAN</h5>
+            <h5 class="card-title">TELAH DI BUKA PENDAFTARAN GEL - I</h5>
             <p class="card-text">PPDB SMK PELAYARAN NUSANTARA KOTA SERANG</p>
-            <a href="#" class="btn btn-primary"><i class="fa fa-send"></i> DAFTAR SEKARANG</a>  
-            <a href="#" class="btn btn-success"><i class="fa fa-power-off"></i> LOGIN SEKARANG</a>
+            <a href="<?php echo base_url()?>auth_siswa/registration" class="btn btn-primary"><i class="fa fa-send"></i> DAFTAR SEKARANG</a>  
+            <a href="<?php echo base_url()?>auth_siswa" class="btn btn-success"><i class="fa fa-power-off"></i> LOGIN SEKARANG</a>
         </div>
     </div>
     
@@ -91,7 +90,7 @@
                     </div>
                 </a>
             </div>
-            <div class="col-xs-6 col-sm col-md">
+            <div class="col-xs-6 col-sm col-md box-biaya">
                 <a href="#">
                     <div class="card rincian-biaya">
                         <div class="card-header text-center">
@@ -103,9 +102,9 @@
                     </div>
                 </a>
             </div>
-            <div class="col-xs-6 col-sm col-md">
+            <div class="col-xs-6 col-sm col-md box-syarat-daftar">
                 <a href="#">
-                    <div class="card rincian-biaya">
+                    <div class="card syarat-daftar">
                         <div class="card-header text-center">
                                 <h5>PERSYARATAN PENDAFTARAN</h5>
                         </div>
@@ -115,9 +114,9 @@
                     </div>
                 </a>
             </div>
-            <div class="col-xs-6 col-sm col-md">
+            <div class="col-xs-6 col-sm col-md box-jadwal">
                 <a href="#">
-                    <div class="card rincian-biaya">
+                    <div class="card jadwal-daftar">
                         <div class="card-header text-center">
                                 <h5>JADWAL PENDAFTARAN</h5>
                         </div>
@@ -127,9 +126,9 @@
                     </div>
                 </a>
             </div>
-            <div class="col-xs-6 col-sm col-md">
+            <div class="col-xs-6 col-sm col-md box-contact">
                 <a href="#">
-                    <div class="card rincian-biaya">
+                    <div class="card contact-person">
                         <div class="card-header text-center">
                                 <h5>KONTAK PERSON</h5>
                         </div>
