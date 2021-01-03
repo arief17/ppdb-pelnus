@@ -1,0 +1,92 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto Sans', sans-serif;
+    background-color: rgba(141, 172, 172, 0.459);
+}
+
+.box-info a{
+    text-decoration: none;
+}
+
+.top-bar{
+    background-color: #1E90FF;
+    height: 35px;
+}
+
+.top-bar .logo-ppdb{
+  padding: 10px;
+  margin-bottom: 2px;
+}
+
+.top-bar .sosmed-ppdb ul li{
+    position: relative;
+    float: right;
+    padding: 5px;
+    list-style-type: none;
+}
+
+.top-bar .sosmed-ppdb ul li a{
+    color: #fff;
+    text-decoration: none;
+}
+
+
+
+
+.persyaratan .card-body i{
+    font-size: 100px;
+}
+
+.rincian-biaya .card-body i{
+    font-size: 100px;
+}
+
+.content-dev{
+    height: 480px;
+    margin-top: -660px;
+    background-color: rgba(86, 190, 190, 0.459);
+}
+
+.content-dev h5{
+    margin-top: 100px;
+    font-size: 50px;
+    color: #fff
+}
+
+.content-dev p{
+    font-size: 30px;
+    color: blue;
+}
+
+.box-info{
+    margin-top: -300px;
+    
+}
+
+.slider-bg img{
+    height: 660px;
+    width: 100%;
+    z-index: 1;
+}
+
+.box-persyaratan {
+   box-shadow: 10px 5px #1E90FF);
+}
+
+
+@media only screen and (max-width: 600px) {
+    .box-info{
+        margin-top: -230px;
+        margin-bottom: 40px;
+        
+    }
+
+    .content-dev h5{
+        margin-top: 100px;
+        font-size: 30px;
+        color: #fff
+    }
+
+}
+

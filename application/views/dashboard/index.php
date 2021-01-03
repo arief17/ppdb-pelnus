@@ -46,48 +46,12 @@
 
 	<div class="container-fluid">
 		<div class="row mt-5">
-<<<<<<< HEAD
 				<div class="col-sm-8 col-xs-8 col-md-8 kiri-dashboard text-center">
 				<img src="<?php echo base_url()?>assets/img/slider/pelnus3.jpg">
 						<a href="<?php echo base_url()?>auth_siswa/registration" class="btn btn-daftar mt-5">DAFTAR</a>
 						<a href="<?php echo base_url()?>auth_siswa" class="btn btn-login-kiri mt-5">LOGIN</a>
 					
 				</div>
-=======
-			<div class="col-sm-8 col-xs-8 col-md-8 kiri-dashboard text-center">
-				<img src="<?php echo base_url() ?>assets/img/slider/pelnus3.jpg">
-				<a href="#" class="btn btn-daftar mt-5">DAFTAR</a>
-				<a href="#" class="btn btn-login-kiri mt-5">LOGIN</a>
-
-			</div>
-
-			<div class="col-sm-4 col-xs-4 col-md-4 kanan-dashboard">
-				<div class="row">
-					<div class="col-sm-6 col-xs-6 text-center">
-						<a href="#" data-toggle="modal" data-target="#alurdaftar">
-							<div class="alur-daftar">
-								<div class="alur-image">
-									<i class="fa fa-line-chart"></i>
-								</div>
-								<div class="alur-text">
-									<h5>Alur Pendaftaran</h5>
-								</div>
-							</div>
-						</a>
-					</div>
-					<div class="col-sm-6 col-xs-6 text-center">
-						<a href="#" data-toggle="modal" data-target="#biayadaftar">
-							<div class="rincian-biaya">
-								<div class="rincian-image">
-									<i class="fa fa-money"></i>
-								</div>
-								<div class="rincian-text">
-									<h5>Rincian Biaya</h5>
-								</div>
-							</div>
-						</a>
-					</div>
->>>>>>> 30c39b8dfa77f11c144789d61aa1b416c8cbbe12
 
 					<div class="col-sm-6 col-xs-6 text-center">
 						<a href="#">
@@ -98,7 +62,6 @@
 								<div class="alur-text">
 									<h5>Persyaratan</h5>
 								</div>
-<<<<<<< HEAD
 							</a>
 						</div>
 
@@ -111,16 +74,6 @@
 									<div class="alur-text">
 										<h5>Persyaratan</h5>
 									</div>
-=======
-							</div>
-						</a>
-					</div>
-					<div class="col-sm-6 col-xs-6 text-center">
-						<a href="#">
-							<div class="rincian-biaya">
-								<div class="rincian-image">
-									<i class="fa fa-newspaper-o"></i>
->>>>>>> 30c39b8dfa77f11c144789d61aa1b416c8cbbe12
 								</div>
 								<div class="rincian-text">
 									<h5>Brosur Online</h5>
@@ -134,7 +87,6 @@
 								<div class="alur-image">
 									<i class="fa fa-file-pdf-o"></i>
 								</div>
-<<<<<<< HEAD
 							</a>
 						</div>
 						<div class="col-sm-6 col-xs-6 text-center">
@@ -146,10 +98,6 @@
 									<div class="rincian-text">
 										<h5>Jadwal</h5>
 									</div>
-=======
-								<div class="alur-text">
-									<h5>Berkas Online</h5>
->>>>>>> 30c39b8dfa77f11c144789d61aa1b416c8cbbe12
 								</div>
 							</div>
 						</a>
@@ -185,7 +133,6 @@
 
 
 
-<<<<<<< HEAD
 
 	<!-- Modal Alur Daftar -->
 	<div class="modal fade" id="alurdaftar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -205,71 +152,8 @@
 		</p>
 		<p>3. Lakukan Konfirmasi Pembayaran agar bisa Login</p>
 		<p>4. Login Ke Aplikasi Untuk Melengkapi Data Pendaftaran</p>
-=======
-	<!-- Modal login -->
-	<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-	<div class="modal-dialog">
-		<div class="modal-content">
-		<div class="modal-header">
-			<h5 class="modal-title" id="exampleModalLabel">Modal Login</h5>
-		</div>
-		<div class="modal-body modal-login">
-		<?= $this->session->flashdata('message'); ?>
-			<form action="<?= base_url('auth_siswa'); ?>" method="post">
-				<div class="form-group">
-					<label for="inoutusername">Username</label>
-					<input type="text" class="form-control" placeholder="Masukan Username Anda">
-				</div>
-				<div class="form-group">
-					<label for="inoutusername">Password</label>
-					<input type="text" class="form-control" placeholder="Masukan Username Anda">
-
-				</div>
-			</div>
-		</div>
-		<!-- akhir modal login -->
-
-		<!-- Modal login -->
-		<div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-			<div class="modal-dialog modal-lg">
-				<div class="modal-content">
-					<div class="modal-header">
-						<h5 class="modal-title" id="exampleModalLabel">Modal Register</h5>
-						</button>
-					</div>
-					<div class="modal-body">
-						<form action="#">
-							<div class="form-group">
-								<label for="inoutusername">Username</label>
-								<input type="text" class="form-control" placeholder="Masukan Username Anda">
-							</div>
-						</form>
-					</div>
-					<div class="modal-footer">
-						<button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
-						<button type="button" class="btn btn-primary">Daftar</button>
-					</div>
-				</div>
-			</div>
-		</div>
-		<!-- akhir modal login -->
 
 
-		<!-- Modal Alur Daftar -->
-		<div class="modal fade" id="alurdaftar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-			<div class="modal-dialog modal-lg dialog-alur">
-				<div class="modal-content">
-					<div class="modal-header">
-						<h5 class="modal-title" id="exampleModalLabel">Alur Pendaftaran</h5>
-						</button>
-					</div>
-					<div class="modal-body">
-
-						<!-- isi content alur daftar -->
->>>>>>> 30c39b8dfa77f11c144789d61aa1b416c8cbbe12
-
-
-<<<<<<< HEAD
 		</div>
 		<div class="modal-footer">
 			<button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
@@ -278,9 +162,6 @@
 	</div>
 	</div>
 	<!-- akhir modal alur daftar -->
-=======
-						<!-- akhir isu content daftar -->
->>>>>>> 30c39b8dfa77f11c144789d61aa1b416c8cbbe12
 
 					</div>
 					<div class="modal-footer">
@@ -421,7 +302,6 @@
 		</div>
 		<!-- akhir modal biaya daftar -->
 
-<<<<<<< HEAD
 	<!-- Modal persyaratan -->
 	<div class="modal fade" id="persyaratanModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
 	<div class="modal-dialog modal-lg">
@@ -476,8 +356,6 @@
 	</div>
 	</div>
 	<!-- akhir modal jadwal -->
-=======
->>>>>>> 30c39b8dfa77f11c144789d61aa1b416c8cbbe12
 
 
 		<!-- JS dan JQUERY -->
